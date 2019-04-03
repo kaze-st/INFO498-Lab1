@@ -2,6 +2,17 @@
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 function hasPairSumToK(a: number[], k: number): boolean {
     
+    let aset = new Set();
+
+    for (let i of a) {
+        let diff: number = k - i;
+        if (aset.has(i)){
+            return true;
+        } else {
+            aset.add(diff);
+        }
+    }
+    return false;
 }
 
 
