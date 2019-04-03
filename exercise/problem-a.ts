@@ -1,7 +1,16 @@
 // Given an array of ints a and an int k, return if there exists a pair (x, y) in a such that x + y = k.
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 function hasPairSumToK(a: number[], k: number): boolean {
-    
+    let b: number[] = []
+    b.concat(a)
+    a.forEach(i => {
+        b.forEach(element => {
+            if (a[i] + element == k) {
+                return true
+            }
+        });
+    });
+    return false
 }
 
 
