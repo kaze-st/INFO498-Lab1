@@ -1,7 +1,9 @@
+import { DH_NOT_SUITABLE_GENERATOR } from "constants";
+
 // Given an array of ints a and an int k, return if there exists a pair (x, y) in a such that x + y = k.
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 function hasPairSumToK(a: number[], k: number): boolean {
-    
+    O(nlog(n)) + n 
 }
 
 
