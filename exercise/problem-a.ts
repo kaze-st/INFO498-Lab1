@@ -6,8 +6,8 @@ function hasPairSumToK(a: number[], k: number): boolean {
     let tempSet = new Set ();
     for (let i = 0; i < a.length; i++){
         let currentNum: number = a[i];
-        let numFormula = k - currentNum;
-        if(tempSet.has(numFormula)){
+        let numRem = k - currentNum;
+        if(tempSet.has(numRem)){
             return true;
         }else{
             tempSet.add(currentNum)

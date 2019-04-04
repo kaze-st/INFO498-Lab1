@@ -6,8 +6,8 @@ function hasPairSumToK(a, k) {
     var tempSet = new Set();
     for (var i = 0; i < a.length; i++) {
         var currentNum = a[i];
-        var numFormula = k - currentNum;
-        if (tempSet.has(numFormula)) {
+        var numRem = k - currentNum;
+        if (tempSet.has(numRem)) {
             return true;
         }
         else {
