@@ -2,7 +2,20 @@
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 
 function hasPairSumToK(a: number[], k: number): boolean {
+    let complementSet = new Set();
+    let res: boolean = false;
     
+    a.forEach((num) => {
+        complementSet.add(num)
+    });
+
+    a.forEach((num) => {
+        if (complementSet.has(k-num)){
+            res = true;
+        }
+    });
+
+    return res
 }
 
 
