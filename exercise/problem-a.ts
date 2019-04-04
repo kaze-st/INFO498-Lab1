@@ -2,7 +2,19 @@
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 
 function hasPairSumToK(a: number[], k: number): boolean {
+    let j = 1;
+    if (a.length == 0)
+        return false;
     
+    while (j < a.length) {
+        for(let b in a) {
+            if (a[b] != a[j] && a[b] + a[j] == k) {
+                return true;
+            }
+        }
+        j++;
+    }  
+    return false;
 }
 
 
