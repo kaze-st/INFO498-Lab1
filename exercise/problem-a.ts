@@ -2,10 +2,18 @@
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 
 function hasPairSumToK(a: number[], k: number): boolean {
-    
+    let set = new Set();
+    let flag: boolean = false;
+    a.forEach((i) => {
+        set.add(i);
+    })
+    a.forEach((x) => {
+        if (set.has(k-x)) {
+            flag = true;
+        }
+    });
+    return flag;
 }
-
-
 
 
 
