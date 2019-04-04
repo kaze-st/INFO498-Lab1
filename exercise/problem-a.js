@@ -1,20 +1,18 @@
 // Given an array of ints a and an int k, return if there exists a pair (x, y) in a such that x + y = k.
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 function hasPairSumToK(a, k) {
-    a.sort();
+    a.sort(function (a, b) { return a - b; });
     var l = 0;
     var r = a.length - 1;
     while (l < r) {
-        while (l < r) {
-            if (a[l] + a[r] == k) {
-                return true;
-            }
-            else if (a[l] + a[r] < k) {
-                l++;
-            }
-            else {
-                r--;
-            }
+        if (a[l] + a[r] == k) {
+            return true;
+        }
+        else if (a[l] + a[r] < k) {
+            l++;
+        }
+        else {
+            r--;
         }
     }
     return false;

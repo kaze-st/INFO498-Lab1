@@ -2,7 +2,7 @@
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 
 function hasPairSumToK(a: number[], k: number): boolean {
-    a.sort();
+    a.sort(function(a,b){return a-b});
     var l = 0;
     var r = a.length-1;
 
