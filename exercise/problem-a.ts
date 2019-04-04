@@ -2,10 +2,27 @@
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 
 function hasPairSumToK(a: number[], k: number): boolean {
-    
+
+    let sum: number;
+    let lastIndex: number = a.length-1;  // count from a.length -> 0 
+    let i: number = 0;                   // count from 0 -> a.length
+
+    a.sort((a, b) => a - b); 
+
+    while (lastIndex >= 0) {
+
+        sum = a[lastIndex] + a[i];   // sum the first and last values
+
+        if (sum == k) {     
+            return true;
+        } else if (sum < k) {
+            i++;
+        }
+        
+        lastIndex--; 
+    }
+    return false;
 }
-
-
 
 
 
