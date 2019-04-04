@@ -20,7 +20,7 @@ function hasPairSumToK(a: number[], k: number): boolean {
 
     // O(n) soluStion
     let s = new Set();
-    
+
     for (let n of a) {
         let reminder = k - n;
         if (!s.has(reminder)) {
