@@ -2,7 +2,16 @@
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 
 function hasPairSumToK(a: number[], k: number): boolean {
-    
+	let s = new Set();
+	let pair: boolean = false;
+	a.forEach(function(num: number) {
+		if (s.has(num)) {
+			pair = true;
+		} else {
+			s.add(k - num);
+		}
+	});
+	return pair;
 }
 
 
