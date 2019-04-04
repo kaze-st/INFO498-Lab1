@@ -6,7 +6,6 @@ function hasPairSumToK(a: number[], k: number): boolean {
     var l = 0;
     var r = a.length-1;
 
-    while(l < r) {
         while(l < r) {
             if(a[l] + a[r] == k) {
                 return true;
@@ -16,7 +15,7 @@ function hasPairSumToK(a: number[], k: number): boolean {
                 r--;
             }
         }
-    }
+    
     return false;
 }
 
