@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 exports.__esModule = true;
 // Given an array of ints a and an int k, return if there exists a pair (x, y) in a such that x + y = k.
@@ -15,6 +16,11 @@ function hasPairSumToK(a, k) {
         }
     }
     return false;
+=======
+// Given an array of ints a and an int k, return if there exists a pair (x, y) in a such that x + y = k.
+// This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
+function hasPairSumToK(a, k) {
+>>>>>>> 2456a19a7d29f62e5682772bc7a862463d11be47
 }
 // TESTS don't touch them
 function test(actual, expected) {
