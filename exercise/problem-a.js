@@ -5,16 +5,14 @@ function hasPairSumToK(a, k) {
     var l = 0;
     var r = a.length - 1;
     while (l < r) {
-        while (l < r) {
-            if (a[l] + a[r] == k) {
-                return true;
-            }
-            else if (a[l] + a[r] < k) {
-                l++;
-            }
-            else {
-                r--;
-            }
+        if (a[l] + a[r] == k) {
+            return true;
+        }
+        else if (a[l] + a[r] < k) {
+            l++;
+        }
+        else {
+            r--;
         }
     }
     return false;
