@@ -3,7 +3,7 @@
 function hasPairSumToK(a: number[], k: number): boolean {
 
     let sum: number;
-    let lastIndex: number = a.length-1;  // count from 0 <- a.length 
+    let lastIndex: number = a.length-1;  // count from a.length -> 0 
     let i: number = 0;                   // count from 0 -> a.length
 
     a.sort((a, b) => a - b); 
