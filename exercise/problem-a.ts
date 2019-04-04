@@ -2,12 +2,36 @@
 // This can be solved in O(nlog(n)) time trivially, or even in O(n) if you use another data structure
 
 function hasPairSumToK(a: number[], k: number): boolean {
+
+    // there is no pair
+    if (a.length < 1) {
+        return false;
+    }
+
+    // O(n2) solution
+    // for (let i = 0; i < a.length - 1; i++) {
+    //     for (let j = i + 1; j < a.length; j++) {
+    //         if (a[i] + a[j] == k) {
+    //             return true;
+    //         }
+    //     }
+    // }
+    // return false;
+
+    // O(n) soluStion
+    let s = new Set();
     
+    for (let n of a) {
+        let reminder = k - n;
+        if (!s.has(reminder)) {
+            s.add(n);
+        } else {
+            return true;
+        }
+    }
+
+    return false;
 }
-
-
-
-
 
 // TESTS don't touch them
 function test(actual: [number[],number], expected:boolean){
