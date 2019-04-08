@@ -3,9 +3,24 @@
 
 function hasPairSumToK(a: number[], k: number): boolean {
     
+    let sorted = a.sort();
+
+    let i: number = 0;
+
+    let j = sorted.length-1;
+
+    while(i < j){
+        if ((sorted[i] + sorted[j]) == k){
+            return true;
+        } else if ((sorted[i]+sorted[j]) < k){
+            i++;
+        } else {
+            j--;
+        }
+    }
+    console.log(sorted);
+    return false;
 }
-
-
 
 
 
