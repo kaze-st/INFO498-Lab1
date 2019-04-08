@@ -3,9 +3,30 @@
 
 function hasPairSumToK(a: number[], k: number): boolean {
     
+    // sort array
+    let sorted = a.sort();
+
+    // indexes for current and last number in array to compare
+    let i: number = 0;
+
+    let j = sorted.length-1;
+
+    // while loop to go thru sorted array
+    while(i < j){
+        // return true if sum is k
+        if ((sorted[i] + sorted[j]) == k){
+            return true;
+        // go next index if still not k
+        } else if ((sorted[i]+sorted[j]) < k){
+            i++;
+        // go to previous index if still not k
+        } else {
+            j--;
+        }
+    }
+    console.log(sorted);
+    return false;
 }
-
-
 
 
 
