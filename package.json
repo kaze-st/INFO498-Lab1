@@ -1,0 +1,21 @@
+{
+  "name": "info498-lab1",
+  "version": "1.0.0",
+  "description": "npm install",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronluannguyen/INFO498-Lab1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronluannguyen/INFO498-Lab1/issues"
+  },
+  "homepage": "https://github.com/aaronluannguyen/INFO498-Lab1#readme"
+}
