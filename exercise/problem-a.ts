@@ -3,10 +3,17 @@
 
 function hasPairSumToK(a: number[], k: number): boolean {
     
+    for(let i:number = 0; i<a.length; i ++ ){
+        for(let j:number = i; j<a.length; j ++ ){
+            let sum = a[i] + a[j+1];
+            if (sum === k) {
+                return true
+            }
+        }
+    }
+
+    return false; 
 }
-
-
-
 
 
 // TESTS don't touch them
